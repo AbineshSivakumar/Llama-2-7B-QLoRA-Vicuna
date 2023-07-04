@@ -23,6 +23,6 @@ source ~/.bashrc
 
 conda init
 
-conda create -n qlora -y
+conda create --name qlora python=3.8 -y
 
 conda activate qlora

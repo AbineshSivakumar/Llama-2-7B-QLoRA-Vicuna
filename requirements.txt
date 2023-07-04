@@ -1,0 +1,7 @@
+torch
+transformers
+datasets
+peft
+tqdm
+trl
+ipykernel

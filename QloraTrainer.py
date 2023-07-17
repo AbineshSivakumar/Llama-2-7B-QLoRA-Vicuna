@@ -74,7 +74,7 @@ class QloraTrainer:
             train_dataset=data["train"],
             args=transformers.TrainingArguments(
                 per_device_train_batch_size=1,
-                gradient_accumulation_steps=4,
+                gradient_accumulation_steps=8,
                 warmup_steps=100,
                 #max_steps=200,  # short run for debugging
                 num_train_epochs=1,  # full run
@@ -82,7 +82,7 @@ class QloraTrainer:
                 fp16=True,
                 logging_steps=20,
                 output_dir=self.config["trainer_output_dir"],
-                report_to="tensorboard",
+                report_to="wandb",
                 #optim="adamw"
             ),
             data_collator=transformers.DataCollatorForLanguageModeling(self.tokenizer, mlm=False),

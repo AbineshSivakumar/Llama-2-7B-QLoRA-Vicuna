@@ -1,5 +1,5 @@
 import argparse
-
+import gradio as gr
 import torch
 import yaml
 from langchain import PromptTemplate
@@ -28,6 +28,10 @@ def get_llm_response(prompt):
     raw_output = pipe(get_prompt(prompt))
     return raw_output
 
+def generate_response(prompt):
+    raw_output = get_llm_response(prompt)
+    return raw_output[0]['generated_text'].split("### RESPONSE:")[1]
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("config_path", help="Path to the config YAML file")
@@ -54,4 +58,16 @@ if __name__ == "__main__":
         repetition_penalty=1.15
     )
 
-    print(get_llm_response("What is your favorite movie?"))
+    input_text = gr.inputs.Textbox(lines=5, label="Enter your prompt")
+
+    output_text = gr.outputs.Textbox(label="Response")
+
+    interface = gr.Interface(
+        fn=generate_response,
+        inputs=input_text,
+        outputs=output_text,
+        title="Language Model Demo",
+        description="Enter a prompt and the model will generate a response.",
+    )
+
+    interface.launch(share=True)

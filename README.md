@@ -1,13 +1,34 @@
-# QLoRA_RLHF
+# Fine-Tuning Llama-7B-Uncensored with Vicuna 70k Dataset Using Quantised Low Rank Adapations (LoRA)
 
-This repository contains code to fine-tune a Llama-7B-Uncensored model using the Vicuna 70k dataset using Quantised Low Rank Adapations (LoRA).
+This repository provides resources to fine-tune the Llama-7B-Uncensored model using the Vicuna 70k dataset and Quantised Low Rank Adapations (LoRA).
 
-The Vicuna 70k dataset is a collection of user-generated conversations that were gathered from ShareGPT.com. The dataset contains a variety of topics, including casual conversation, storytelling, and problem-solving.
+## Dataset: Vicuna 70k
 
-Quantised Low Rank Adapations (LoRA) is a technique for reducing the size of a large language model while maintaining its performance. LoRA works by quantizing the model's parameters and then applying low-rank approximations to the quantized parameters.
+The Vicuna 70k dataset is a rich collection of user-generated conversations sourced from ShareGPT.com. It encompasses a wide array of topics, including but not limited to:
 
-This repository provides a step-by-step guide to fine-tuning a Llama-7B-Uncensored model using the Vicuna 70k dataset using LoRA. The guide also includes instructions on how to evaluate the fine-tuned model.
+- Casual conversation
+- Storytelling
+- Problem-solving
 
+## Technique: Quantised Low Rank Adapations (LoRA)
 
+LoRA is a cutting-edge technique designed to reduce the size of large language models without sacrificing performance. It achieves this by:
 
+1. **Quantizing the Parameters:** Reducing the numerical precision of the model's parameters.
+2. **Applying Low-Rank Approximations:** Utilizing low-rank approximations on the quantized parameters.
+
+## Guide to Fine-Tuning
+
+This repository offers a comprehensive guide to fine-tuning the Llama-7B-Uncensored model using the Vicuna 70k dataset with LoRA. It also includes detailed instructions for evaluating the fine-tuned model.
+
+### Running the Code
+
+To train the model, simply run the following command:
+
+```bash
 python train.py configs/open_llama_7b_qlora_uncensored.yaml
+```
+
+## Contributing
+
+Feel free to contribute to this project by submitting issues, pull requests, or reaching out with any questions or suggestions.

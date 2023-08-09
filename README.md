@@ -17,6 +17,10 @@ LoRA is a cutting-edge technique designed to reduce the size of large language m
 1. **Quantizing the Parameters:** Reducing the numerical precision of the model's parameters.
 2. **Applying Low-Rank Approximations:** Utilizing low-rank approximations on the quantized parameters.
 
+## Detailed Report
+
+A comprehensive report detailing the methods, experiments, and results is available in this repository. Please refer to the [report](Report.pdf) for a complete understanding of the project.
+
 ## Guide to Fine-Tuning
 
 This repository offers a comprehensive guide to fine-tuning the Llama-7B-Uncensored model using the Vicuna 70k dataset with LoRA. It also includes detailed instructions for evaluating the fine-tuned model.

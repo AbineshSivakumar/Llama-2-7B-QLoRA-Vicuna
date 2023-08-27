@@ -1,5 +1,3 @@
-[12:51 am] Pranav Unnikrishnan - [CB.EN.U4AIE20053]
-
 #!/bin/bash
 
 

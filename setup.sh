@@ -47,3 +47,5 @@ else
 fi
 
 echo "Setup completed successfully."
+
+#python -m pip install -r requirements.txt to install all the packages

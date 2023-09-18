@@ -42,6 +42,34 @@ Model link: https://huggingface.co/Abinesh/Llama-2_Vicuna_LoRA-13b
 
 Model name: Abinesh/Llama-2_Vicuna_LoRA-13b
 
+### Usage
+
+```bash
+# Initialize the model and tokenizer
+model_name = "Abinesh/Llama-2_Vicuna_LoRA-13b"  
+tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast = False)
+model = AutoModelForCausalLM.from_pretrained(model_name)
+
+# Define the text prompt
+prompt = "Once upon a time"
+
+# Tokenize the input text
+input_ids = tokenizer.encode(prompt, return_tensors='pt')
+
+# Generate text based on the input
+output = model.generate(
+    input_ids,
+    max_length=512,  # Maximum length of the generated text
+    top_p=0.9,  # Nucleus sampling
+    top_k=50  # Top-k sampling
+)
+
+# Decode the generated text back to a string
+generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+
+print(generated_text)
+```
+
 ## Contributing
 
 Feel free to contribute to this project by submitting issues, pull requests, or reaching out with any questions or suggestions.

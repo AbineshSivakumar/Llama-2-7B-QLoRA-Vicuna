@@ -51,7 +51,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast = False)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 # Define the text prompt
-prompt = "Once upon a time"
+prompt = "What is a Wikipedia"
 
 # Tokenize the input text
 input_ids = tokenizer.encode(prompt, return_tensors='pt')

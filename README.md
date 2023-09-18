@@ -36,6 +36,11 @@ To train the model, simply run the following command:
 python train.py configs/open_llama_7b_qlora_uncensored.yaml
 ```
 
+## Huggingface
+
+Model link: https://huggingface.co/Abinesh/Llama-2_Vicuna_LoRA-13b/commits/main
+Model name: Abinesh/Llama-2_Vicuna_LoRA-13b
+
 ## Contributing
 
 Feel free to contribute to this project by submitting issues, pull requests, or reaching out with any questions or suggestions.

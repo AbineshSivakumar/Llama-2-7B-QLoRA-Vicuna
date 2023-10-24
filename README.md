@@ -72,4 +72,4 @@ print(generated_text)
 
 ## Contributing
 
-Feel free to contribute to this project by submitting issues, pull requests, or reaching out with any questions or suggestions. 
+Feel free to contribute to this project by submitting issues, pull requests, or reaching out with any questions or suggestions
